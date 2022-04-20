@@ -12,5 +12,5 @@ export default function Weather(props) {
 
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&units=metric&appid=badf18efb01c292c50887b64f1fc7ebd`;
   axios.get(apiUrl).then(handleResponse);
-  return <SpinnerRoundOutlined color="blue" />;
+  return <SpinnerRoundOutlined size="30%" thickness="30" color="5EE6EB" />;
 }
