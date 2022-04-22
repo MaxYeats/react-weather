@@ -1,3 +1,5 @@
+/** @format */
+
 .App {
   text-align: center;
 }
@@ -16,7 +18,7 @@
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
+
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -35,4 +37,54 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+:root {
+  --primary-font: "ABeeZee", sans-serif;
+  --secondary-font: "Barlow", sans-serif;
+  --branding-color: rgb(66, 108, 163);
+}
+
+.react-form {
+  padding: 40px;
+}
+.react-input {
+  font-size: 20px;
+  font-family: var(--primary-font);
+}
+.search-button {
+  font-size: 22px;
+  font-family: var(--primary-font);
+  border-radius: 5px;
+}
+.city-name {
+  font-size: 90px;
+  font-family: var(--primary-font);
+}
+
+.minmax-temp,
+.description {
+  font-size: 24px;
+}
+
+.humidity,
+.wind {
+  font-size: 20px;
+}
+
+.date,
+.time {
+  font-size: 16px;
+}
+.main-temperature {
+  font-size: 75px;
+  font-family: var(--primary-font);
+}
+.row {
+  font-family: var(--secondary-font);
+  padding: 20px;
+}
+
+.icon {
+  padding-top: 25px;
 }
