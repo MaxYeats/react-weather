@@ -44,6 +44,10 @@
   --secondary-font: "Barlow", sans-serif;
   --branding-color: rgb(66, 108, 163);
 }
+.github-link {
+  font-size: 15px;
+  font-family: var(--secondary-font);
+}
 
 .react-form {
   padding: 40px;
