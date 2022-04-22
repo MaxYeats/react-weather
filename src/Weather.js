@@ -5,7 +5,7 @@ import axios from "axios";
 import "./App.css";
 import { SpinnerRoundOutlined } from "spinners-react";
 import { useState } from "react";
-import ReactAnimatedWeather from "react-animated-weather";
+//import ReactAnimatedWeather from "react-animated-weather";
 
 export default function Weather() {
   const [city, setCity] = useState("");
@@ -34,14 +34,15 @@ export default function Weather() {
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
-      icon: (
-        <ReactAnimatedWeather
-          icon="CLEAR_DAY"
-          color="white"
-          size={70}
-          animate="true"
-        />
-      ),
+      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      //(
+      // <ReactAnimatedWeather
+      // icon="CLEAR_DAY"
+      // color="white"
+      // size={70}
+      //animate="true"
+      ///>
+      //),
       // icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
   }
@@ -82,7 +83,9 @@ export default function Weather() {
             </div>
 
             <div className="col-3">
-              <div className="icon">{weather.icon}</div>
+              <div className="icon">
+                <img src={weather.icon} alt="weather icon" />
+              </div>
               <div className="description">{weather.description}</div>
               <div className="humidity">Humidity: {weather.humidity}%</div>
               <div className="wind">Wind: {Math.round(weather.wind)}m/s</div>
