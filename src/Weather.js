@@ -67,8 +67,9 @@ export default function Weather() {
         {form}
         <div className="container">
           <div className="city-name">{city}</div>
-          <div className="date">
-            Monday, 5/1/2022 <span className="time">10:00</span>
+          <div className="date-time">
+            <span className="date"> Monday, 5/1/2022 </span>{" "}
+            <span className="time">10:00</span>
           </div>
           <div className="row">
             <div className="col-3"></div>
